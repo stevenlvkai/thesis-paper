@@ -93,7 +93,7 @@ def df_scatter(df, title,seperate_y_axis=False,y_axis_label='', scale='linear',i
         
         trace_arr.append(trace) 
     fig =go.Figure(data=trace_arr, layout=layout)
-    py.iplot(fig)
+    plotly.offline.plot(fig)
 
 # Plot all of the BTC exchange prices
 df_scatter(btc_usd_datasets,'Bitcoin Price (USD) By Exchange')
@@ -109,7 +109,7 @@ btc_usd_datasets['avg_btc_price_usd']=btc_usd_datasets.mean(axis=1)
 
 # Plot the average BTC price
 btc_trace=go.Scatter(x=btc_usd_datasets.index, y=btc_usd_datasets['avg_btc_price_usd'])
-py.iplot([btc_trace])
+plotly.offline.plot([btc_trace])
 
 #使用Poloniex API来获取数字加密货币交易的数据信息。定义函数get_json_data，它将从给定的URL中下载和缓存JSON数据。
 def get_json_data(json_url,cache_path):
@@ -179,7 +179,7 @@ def correlation_heatmap(df, title, absolute_bounds=True):
         heatmap['zmax'] = 1.0         
         heatmap['zmin'] = -1.0              
         fig = go.Figure(data=[heatmap], layout=layout)     
-        py.iplot(fig) 
+        plotly.offline.plot(fig) 
 
 correlation_heatmap(combined_df_2016.pct_change(), "Cryptocurrency Correlations in 2016")
 #深红色的数值代表强相关性(每一种货币显然是与其自身高度相关的)，深蓝色的数值表示强逆相关性。
