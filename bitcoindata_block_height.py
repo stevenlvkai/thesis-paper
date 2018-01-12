@@ -42,8 +42,8 @@ for i in range(nrows-1):
 height['block_produce']=block_produce
 
 #每个间隔生产几个比特币
-bitcoin_produce=[]
-for i in range(nrows):
+bitcoin_produce=[0]
+for i in range(nrows-1):
     number=height['output_total'][i]*height['block_produce'][i+1]
     bitcoin_produce.append(number)
 
