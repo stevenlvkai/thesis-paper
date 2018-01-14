@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Jan  9 22:45:29 2018
-
+用于读取比特币区块高度、奖励、难度等数据
 @author: 凯
 """
 
