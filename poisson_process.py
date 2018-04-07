@@ -6,6 +6,7 @@ Created on Wed Mar 28 11:17:19 2018
 
 通过泊松过程模拟比特币发行过程
 假设数据从2009/1/3到2018/3/16
+实际上泊松过程的模拟偷懒了
 """
 
 from random import expovariate
