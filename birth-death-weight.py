@@ -3,6 +3,7 @@
 Created on Thu Apr 19 11:15:59 2018
 
 @author: 凯
+利用山寨币与比特币的比值计算比特币的增发
 """
 
 from random import expovariate
