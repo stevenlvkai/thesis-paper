@@ -3,6 +3,7 @@
 Created on Wed Apr 11 20:40:36 2018
 
 @author: 凯
+模拟生灭过程
 """
 
 from random import expovariate
@@ -125,7 +126,7 @@ if __name__=="__main__":
         avg=0                
         for i in range(100):    
             b=birth(7)
-            d=death(j+7)#指不同的服务率
+            d=death(j+7)#指不同的服务率，从7到106
             
             #data['birth']=b
             #data['death']=d
