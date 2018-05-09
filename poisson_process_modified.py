@@ -107,14 +107,6 @@ def poisson(first,second,third):
 #计算R-square
 def computeRsquare(X, Y):  
     yBar = np.mean(Y)  
-    '''SSE = 0  
-    SST = 0  
-    for i in range(0 , len(X)):  
-        diffXyBar = X[i] - Y[i]  
-        diffYyBar = Y[i] - yBar  
-        SST +=  diffYyBar**2 
-        SSE +=  diffXyBar**2  
-        '''
     SSE=np.sum((X-Y)**2)
     SST=np.sum((Y-yBar)**2)
     return 1-SSE/SST
